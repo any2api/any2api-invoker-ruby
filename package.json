@@ -1,0 +1,45 @@
+{
+  "name": "any2api-invoker-ruby",
+  "version": "0.1.0",
+  "author": "Johannes Wettinger <mail@jojow.de>",
+  "description": "Ruby invoker for any2api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/any2api/any2api-invoker-ruby"
+  },
+  "contributors": [
+    {
+      "name": "Johannes Wettinger",
+      "email": "mail@jojow.de"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "any2api",
+    "ruby",
+    "invoker"
+  ],
+  "preferGlobal": false,
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "async": "0.9.0",
+    "shortid": "~2.1.3",
+    "verr-log": "~1.0.0",
+    "any2api-util": "*",
+    "any2api-access": "*"
+  },
+  "devDependencies": {
+    "fs-extra": "~0.12.0",
+    "mocha": "~1.21.4",
+    "chai": "~1.9.1"
+  },
+  "scripts": {
+    "prepare-buildtime": "npm install",
+    "prepare-runtime": "npm install && cd node_modules/any2api-access && npm run prepare-runtime",
+    "start": "node ./invoke.js",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  }
+}
