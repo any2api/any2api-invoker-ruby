@@ -1,0 +1,32 @@
+{
+  "executables": {
+    "script": {
+      "parameters_schema": {
+        "input_file": {
+          "type": "string",
+          "mapping": "file",
+          "file_path": "./input.txt"
+        },
+        "input_env": {
+          "type": "string",
+          "mapping": "env"
+        }
+      },
+      "results_schema": {
+        "output_file": {
+          "type": "string",
+          "mapping": "file",
+          "file_path": "./output.txt"
+        }
+      },
+      "path": ".",
+      "invoker_name": "ruby"
+    }
+  },
+  "invokers": {
+    "ruby": {
+      "path": "../..",
+      "expose": true
+    }
+  }
+}
