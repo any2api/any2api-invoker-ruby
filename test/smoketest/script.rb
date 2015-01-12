@@ -15,5 +15,5 @@ File.open("./input.txt", "r") do |f|
 end
 
 File.open("./output.txt", "w") do |f|
-  f.write("some output written by script.py\nline break\n")
+  f.write("some output written by script.rb\nline break\n")
 end
