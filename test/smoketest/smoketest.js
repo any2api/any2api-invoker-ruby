@@ -13,7 +13,7 @@ var specPathScript = path.join(__dirname, 'apispec_copy.json');
 var apiSpecScript = JSON.parse(fs.readFileSync(path.join(__dirname, 'apispec.json'), 'utf8'));
 apiSpecScript.apispec_path = specPathScript;
 
-var runScript = {
+var instanceScript = {
   parameters: {
     input_file: 'some input through a file',
     input_env: 'some more input through env',
@@ -83,12 +83,12 @@ describe('script.rb', function() {
   it('invoke executable', function(done) {
     util.invokeExecutable({ apiSpec: apiSpecScript,
                             executable_name: 'script',
-                            run: runScript }, function(err, run) {
+                            instance: instanceScript }, function(err, instance) {
                               if (err) throw err;
 
-                              expect(run.finished).to.exist;
+                              expect(instance.finished).to.exist;
 
-                              console.log(run);
+                              console.log(instance);
 
                               done();
                             });
