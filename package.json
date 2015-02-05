@@ -1,6 +1,6 @@
 {
   "name": "any2api-invoker-ruby",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Johannes Wettinger <mail@jojow.de>",
   "description": "Ruby invoker for any2api",
   "repository": {
@@ -35,6 +35,7 @@
   },
   "scripts": {
     "prepare-buildtime": "npm install",
+    "prepare-executable": "true",
     "prepare-runtime": "npm install && cd node_modules/any2api-access && npm run prepare-runtime",
     "start": "node ./invoke.js",
     "test": "mocha"
