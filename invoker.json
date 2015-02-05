@@ -58,6 +58,7 @@
       "type": "string",
       "default": "bundle exec ruby script.rb"
     }
-  }
+  },
+  "parameters_required": [ "cmd" ]
 }
 
