@@ -18,6 +18,14 @@
             "description": "Locked gem requirements, written to Gemfile.lock",
             "type": "string"
           },
+          "encoding_stdout": {
+            "description": "Encoding of stdout, e.g., utf8",
+            "type": "string"
+          },
+          "encoding_stderr": {
+            "description": "Encoding of stderr, e.g., utf8",
+            "type": "string"
+          },
           "env": {
             "description": "Environment variables; overrides environment variables mapped from parameters",
             "type": "object"
