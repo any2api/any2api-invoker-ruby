@@ -26,6 +26,10 @@
             "description": "Encoding of stderr, e.g., utf8",
             "type": "string"
           },
+          "cwd": {
+            "description": "Current working directory, e.g., /tmp",
+            "type": "string"
+          },
           "env": {
             "description": "Environment variables; overrides environment variables mapped from parameters",
             "type": "object"
