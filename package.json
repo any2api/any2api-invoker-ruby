@@ -1,6 +1,6 @@
 {
   "name": "any2api-invoker-ruby",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "author": "Johannes Wettinger <mail@jojow.de>",
   "description": "Ruby invoker for any2api",
   "repository": {
