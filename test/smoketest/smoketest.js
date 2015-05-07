@@ -50,48 +50,56 @@ describe('script.rb', function() {
   });
 
   it('prepare buildtime', function(done) {
-    util.prepareBuildtime({ apiSpec: apiSpecScript,
-                            executable_name: 'script' }, function(err) {
-                              if (err) throw err;
-                              
-                              done();
-                            });
+    util.prepareBuildtime({
+      apiSpec: apiSpecScript,
+      executable_name: 'script'
+    }, function(err) {
+      if (err) throw err;
+      
+      done();
+    });
   });
 
   it('prepare executable', function(done) {
-    util.prepareExecutable({ apiSpec: apiSpecScript,
-                             executable_name: 'script' }, function(err, updatedSpec) {
-                               if (err) throw err;
+    util.prepareExecutable({
+      apiSpec: apiSpecScript,
+      executable_name: 'script'
+    }, function(err, updatedSpec) {
+      if (err) throw err;
 
-                               apiSpecScript = updatedSpec;
+      apiSpecScript = updatedSpec;
 
-                               expect(updatedSpec.executables.script.prepared).to.be.true;
+      expect(updatedSpec.executables.script.prepared).to.be.true;
 
-                               done();
-                             });
+      done();
+    });
   });
 
   it('prepare runtime', function(done) {
-    util.prepareRuntime({ apiSpec: apiSpecScript,
-                          executable_name: 'script' }, function(err) {
-                            if (err) throw err;
-                            
-                            done();
-                          });
+    util.prepareRuntime({
+      apiSpec: apiSpecScript,
+      executable_name: 'script'
+    }, function(err) {
+      if (err) throw err;
+      
+      done();
+    });
   });
 
   it('invoke executable', function(done) {
-    util.invokeExecutable({ apiSpec: apiSpecScript,
-                            executable_name: 'script',
-                            instance: instanceScript }, function(err, instance) {
-                              if (err) throw err;
+    util.runInstance({
+      apiSpec: apiSpecScript,
+      executable_name: 'script',
+      instance: instanceScript
+    }, function(err, instance) {
+      if (err) throw err;
 
-                              expect(instance.finished).to.exist;
+      expect(instance.finished).to.exist;
 
-                              console.log(instance);
+      console.log(instance);
 
-                              done();
-                            });
+      done();
+    });
   });
 
   after(cleanup);

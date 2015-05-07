@@ -2,6 +2,7 @@
   "parameters_schema": {
     "invoker_config": {
       "type": "json_object",
+      "default": { "access": "local" },
       "json_schema": {
         "$schema": "http://json-schema.org/draft-04/schema#",
         "type": "object",
@@ -28,6 +29,10 @@
           },
           "cwd": {
             "description": "Current working directory, e.g., /tmp",
+            "type": "string"
+          },
+          "instance_path": {
+            "description": "Directory in which the instance is placed, e.g., /tmp/my-instance",
             "type": "string"
           },
           "env": {
@@ -75,6 +80,6 @@
       "default": "bundle exec ruby script.rb"
     }
   },
-  "parameters_required": [ "cmd" ]
+  "parameters_required": [ "invoker_config", "cmd" ]
 }
 

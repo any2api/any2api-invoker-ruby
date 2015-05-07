@@ -1,6 +1,6 @@
 {
   "name": "any2api-invoker-ruby",
-  "version": "0.1.12",
+  "version": "0.2.0",
   "author": "Johannes Wettinger <mail@jojow.de>",
   "description": "Ruby invoker for any2api",
   "repository": {
@@ -21,9 +21,8 @@
   ],
   "preferGlobal": false,
   "dependencies": {
-    "lodash": "~2.4.1",
-    "async": "0.9.0",
-    "shortid": "~2.1.3",
+    "lodash": "~3.8.0",
+    "async": "~0.9.0",
     "verr-log": "~1.0.0",
     "any2api-util": "*",
     "any2api-access": "*"
