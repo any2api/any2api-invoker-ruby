@@ -52,7 +52,7 @@ describe('script.rb', function() {
   it('prepare buildtime', function(done) {
     util.prepareBuildtime({
       apiSpec: apiSpecScript,
-      executable_name: 'script'
+      executableName: 'script'
     }, function(err) {
       if (err) throw err;
       
@@ -63,7 +63,7 @@ describe('script.rb', function() {
   it('prepare executable', function(done) {
     util.prepareExecutable({
       apiSpec: apiSpecScript,
-      executable_name: 'script'
+      executableName: 'script'
     }, function(err, updatedSpec) {
       if (err) throw err;
 
@@ -78,7 +78,7 @@ describe('script.rb', function() {
   it('prepare runtime', function(done) {
     util.prepareRuntime({
       apiSpec: apiSpecScript,
-      executable_name: 'script'
+      executableName: 'script'
     }, function(err) {
       if (err) throw err;
       
@@ -89,7 +89,7 @@ describe('script.rb', function() {
   it('invoke executable', function(done) {
     util.runInstance({
       apiSpec: apiSpecScript,
-      executable_name: 'script',
+      executableName: 'script',
       instance: instanceScript
     }, function(err, instance) {
       if (err) throw err;

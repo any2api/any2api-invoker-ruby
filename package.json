@@ -1,6 +1,6 @@
 {
   "name": "any2api-invoker-ruby",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Johannes Wettinger <mail@jojow.de>",
   "description": "Ruby invoker for any2api",
   "repository": {
@@ -28,7 +28,7 @@
     "any2api-access": "*"
   },
   "devDependencies": {
-    "fs-extra": "~0.12.0",
+    "fs-extra": "~0.18.3",
     "mocha": "~1.21.4",
     "chai": "~1.9.1"
   },
