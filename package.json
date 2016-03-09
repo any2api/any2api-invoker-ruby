@@ -38,8 +38,5 @@
     "prepare-runtime": "npm install && cd node_modules/any2api-access && npm run prepare-runtime",
     "start": "node ./invoke.js",
     "test": "mocha"
-  },
-  "engines": {
-    "node": ">= 0.10"
   }
 }
