@@ -11,7 +11,7 @@ var invokerPath = path.join(__dirname, '..', '..');
 var specPathScript = path.join(__dirname, 'apispec_copy.json');
 
 var apiSpecScript = JSON.parse(fs.readFileSync(path.join(__dirname, 'apispec.json'), 'utf8'));
-apiSpecScript.apispec_path = specPathScript;
+apiSpecScript.path = specPathScript;
 
 var instanceScript = {
   parameters: {
